@@ -1,2 +1,28 @@
 venv
+network_security_env
 .env
+
+networkSecurity.egg-info
+
+
+
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Packaging
+
+build/
+dist/
+
+
+
+# Data & artifacts
+artifacts
+logs
+
+
+# IDE
+.vscode/
+.idea/

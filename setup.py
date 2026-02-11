@@ -13,7 +13,7 @@ def get_requirements()->List[str]:
     requirement_list:List[str]=[]
 
     try:
-        with open('requirement.txt','r') as file:
+        with open('requirements.txt','r') as file:
             lines=file.readlines()
 
             for line in lines:
@@ -21,7 +21,7 @@ def get_requirements()->List[str]:
                 if requirement and requirement!='-e .':
                     requirement_list.append(requirement)
     except FileNotFoundError:
-        print("requirement.txt file not found")
+        print("requirements.txt file not found")
 
     return requirement_list
 
