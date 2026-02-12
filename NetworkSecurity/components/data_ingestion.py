@@ -83,10 +83,14 @@ class DataIngestion:
             )
 
             test_set.to_csv(
-                self.data_ingestion_config.training_file_path,index=False,header=True
+                self.data_ingestion_config.testing_file_path,index=False,header=True
             )
 
-           
+            if not os.path.exists(self.data_ingestion_config.training_file_path):
+                raise Exception("Train file not created")
+
+            if not os.path.exists(self.data_ingestion_config.testing_file_path):
+                raise Exception("Test file not created")
 
             logging.info(f"Exported train and test file path")
 
